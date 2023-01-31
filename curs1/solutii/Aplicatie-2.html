@@ -4,7 +4,37 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 	 <style>
-		
+		a[title] {
+			color: green;
+			font-size: 15px;
+		}
+		a[href="https://www.link-academy.com"] {
+			color: #1f6053;
+			font-size: 25px;
+		}
+		a[href *= "#en/ro/" ] { 
+			color: blue; 
+		 } 
+		a[href $= "#fr/ro/"] {
+			color:aqua 
+		 } 
+		a[href *= "#it/ro/"] { 
+			color: red;
+		 }
+		 a[href ^="https"]{
+			 text-transform: uppercase;
+		 }
+		 a[href $=".com"]{
+			 text-decoration: none;
+			 font-style: italic;
+			}
+		a[data-info~="extern"] {
+		color: red;
+		}
+		a[data-info~="intern"] {
+		   border: 1px solid black;
+		}
+		 p:empty{ display:none;}
 
     </style>
 </head>

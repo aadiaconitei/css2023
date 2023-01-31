@@ -1,0 +1,47 @@
+
+#isiqfor, #isiqfor2 {
+    /* border: 2px solid black; */
+    padding: 10px;
+    width: 50px;
+    float: left;
+}
+
+#isiqfor>div, #isiqfor2>div {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+    opacity: 0.1;
+    border: 1px solid #333;
+    border-radius: 50%;
+    
+}
+#isiqfor{
+    position:absolute;
+    left: 7%;
+    top: 22%;
+}
+#isiqfor2{
+    position:absolute;
+    right: 7%;
+    top: 16%;
+   
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+.red {
+    background-color: red;
+}
+#isiqfor>div.on , #isiqfor2>div.on {
+    opacity: 1;
+    transition: opacity 200ms linear;
+}
+body{
+    background-image: url('../img/city.png');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
