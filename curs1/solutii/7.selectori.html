@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primvacara</title>
+    <style>
+        .petal {
+            background: linear-gradient(0deg, #9d5555 0%, rgba(27, 144, 194, 0.67) 100%);
+            border: 7px dashed red;
+            box-sizing: border-box;
+            box-shadow: 4px 4px 20px #ffffff;
+        }
+
+
+
+
+        .front_petal_S {
+            position: absolute;
+            width: 39%;
+            height: 39%;
+            bottom: 9%;
+            left: 30%;
+
+            background: linear-gradient(180deg, #f0e115 0%, rgba(240, 217, 11, 0.9) 100%);
+
+            box-sizing: border-box;
+
+            border-radius: 50% 0;
+            transform: rotate(-45deg);
+        }
+
+
+
+        .front_petal_E {
+            position: absolute;
+            width: 39%;
+            height: 39%;
+            top: 30%;
+            right: 9%;
+
+            background: linear-gradient(180deg, #ecf00d 0%, rgba(194, 155, 27, 0.9) 100%);
+
+            box-sizing: border-box;
+
+            border-radius: 50% 0;
+            transform: rotate(-135deg);
+        }
+
+
+
+        .front_petal_N {
+            position: absolute;
+            width: 39%;
+            height: 39%;
+            left: 30%;
+            top: 9%;
+
+            background: linear-gradient(0deg, #ecf00c 0%, rgba(194, 149, 27, 0.9) 100%);
+
+            box-sizing: border-box;
+
+            border-radius: 50% 0;
+            transform: rotate(-45deg);
+        }
+
+        .front_petal_W {
+            position: absolute;
+            width: 39%;
+            height: 39%;
+            top: 30%;
+            left: 9%;
+            background: linear-gradient(180deg, #ffef086e 0%, rgba(194, 149, 27, 0.9) 100%);
+
+            box-sizing: border-box;
+
+            border-radius: 50% 0;
+            transform: rotate(45deg);
+        }
+
+        .core {
+            position: absolute;
+            width: 20%;
+            height: 20%;
+            left: 40%;
+            top: 40%;
+            background: #fb030ff5;
+            border: 7px dotted #ffffff;
+            box-sizing: border-box;
+            border-radius: 50%;
+        }
+
+        .box {
+            width: 50%;
+            padding-bottom: 50%;
+            background-color: #fff;
+            position: relative;
+            margin: auto;
+            margin-top: 5%;
+        }
+
+        .title {
+            width: 50%;
+            margin: auto;
+
+        }
+
+        div#infinit {
+            position: relative;
+            width: 178px;
+            height: 100px;
+           
+        }
+
+        div#infinit:before,
+        div#infinit:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            border: 10px dashed rgb(253, 0, 0);
+            border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+            transform: rotate(45deg);
+        }
+
+        div#infinit:after {
+            left: auto;
+            right: 0;
+            transform: rotate(-135deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>Va doresc o primavara frumoasa!</h1>
+    </div>
+    <div class="box">
+
+
+        <div class=" petal front_petal_S"></div>
+        <div class="petal front_petal_E"></div>
+        <div class="petal front_petal_N"></div>
+        <div class="petal front_petal_W"></div>
+        <div class="core"></div>
+        <div id="infinit">
+           
+        </div>
+    </div>
+</body>
+
+</html>

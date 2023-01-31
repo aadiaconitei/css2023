@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Selectors</title>
+    <style>
+		* { 
+			border: 1px dotted black;
+			margin:0;
+			padding:0		
+		}
+		ol *{
+			color:#dddfff;
+		}
+		div * {
+		 background: #e3e3e3;
+		}
+		h2{
+		color:green;
+		border-bottom:solid 2px blue;
+		}
+    </style>
+</head>
+<body>
+	<h2> Stil aplicat pentru toate elementele cu: *   . De evitat acest mecanism pe cat posibil. Se foloseste pentru a reseta anumite proprietati.  </h2>
+	<h2> Stil aplicat pentru toate elementele h2  </h2>
+	<ol>
+	  <li> List Item 1</li>
+	  <li> List Item 2</li>
+	  <li> List Item 3</li>
+	  <li> List Item 4</li>
+	</ol>
+	<div>
+		<h2> Stil aplicat pe fiecare element copil a lui div </h2>
+		<ul>
+		  <li> List Item 1</li>
+		  <li> List Item 2</li>
+		</ul>
+		<ul>
+		  <li> List Item 3</li>
+		  <li> List Item 4</li>
+		</ul>   
+	</div>
+</body>
+</html>

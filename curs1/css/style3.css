@@ -1,0 +1,21 @@
+section, div{
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid red;
+}
+section p{
+    font-style: italic;
+}
+section > article >p{
+    font-weight: bold;
+}
+
+section > article p{
+    font-weight: bold;
+}
+div p{
+    color: red;
+}
+section + p {
+    color: brown;
+}
