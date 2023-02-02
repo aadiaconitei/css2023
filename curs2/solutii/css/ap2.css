@@ -1,0 +1,27 @@
+.cube {
+  position: relative;
+  /* margin: auto;
+  width: 100%;
+  max-width: 100px; */
+  display: flex;
+  justify-content: center;
+}
+.side {
+  height: 95px;
+  position: absolute;
+  text-align: center;
+  width: 95px;
+  background-color: antiquewhite;
+}
+.top {
+  background: #9acc53;
+  transform: rotate(-45deg) skew(15deg, 15deg);
+}
+.left {
+  background: #c6b83f;
+  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+}
+.right {
+  background: #39b28e;
+  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}

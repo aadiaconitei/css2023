@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 2rem;
+  }
+.container .card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 0.1rem 1rem 0.1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: #ece9e6;
+    background: linear-gradient(to right, #ffffff, #ece9e6);
+  }
+
+div.container, div.card {
+  transform: perspective(900px) rotateX(60deg) scale(0.7);
+  box-shadow: 0px 20px 100px #555;
+  transition: 0.5s ease all;
+}
+div.container:hover, div.card:hover {
+  transform: rotate(0deg) scale(1) translateY(10px);
+}
+

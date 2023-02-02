@@ -1,0 +1,12 @@
+.container{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid red;
+    transition: width 3s, height 4s; 
+    transition-delay: 1s;
+}
+.container:hover{
+    width: 150px;
+    height: 750px;
+}

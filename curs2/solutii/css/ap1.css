@@ -1,0 +1,21 @@
+body,
+html {
+  height: 100%;
+}
+
+.element {
+  display: inline-block;
+  background-color: #dd3011;
+  height: 100px;
+  width: 100px;
+  font-size: 14px;
+  padding: 10px;
+  color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+  /* transform: skew(10deg, 20deg );/* skew(x-angle,y-angle) */
+  transform: skewX(10deg);
+  transform: skewY(20deg);
+  opacity: 0.7;
+  border-radius: 10px 15px 20px 25px;
+}

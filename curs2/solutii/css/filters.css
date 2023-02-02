@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/utopia.jpg');
+    background-size: cover;
+    animation-name: demo;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes demo {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(180deg);
+    }
+}

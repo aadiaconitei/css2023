@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Loader*/
+
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.8s 1s ease;
+            z-index: 666;
+        }
+
+        .loader {
+            position: relative;
+            display: block;
+            z-index: 201;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            margin: -50px 0 0 -50px;
+            border-radius: 50%;
+            transition: all 1s 1s ease;
+            border: 3px solid transparent;
+            border-top-color: #ff0000;
+            -webkit-animation: spin 1.5s linear infinite;
+            -moz-animation: spin 1.5s linear infinite;
+            -o-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .loader:before {
+            position: absolute;
+            content: '';
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-left-color: #ffee00;
+            -webkit-animation: spin 2s linear infinite;
+            -moz-animation: spin 2s linear infinite;
+            -o-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        .loader:after {
+            position: absolute;
+            content: '';
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-right-color: #4800fd;
+            -webkit-animation: spin 2.5s linear infinite;
+            -moz-animation: spin 2.5s linear infinite;
+            -o-animation: spin 2.5s linear infinite;
+            animation: spin 2.5s linear infinite;
+        }
+
+        /** Here comes the Magic **/
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @-moz-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader-wrapper .loder-section {
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: #111;
+            z-index: 2;
+        }
+
+        .loader-wrapper .loder-section.left-section {
+            left: 0;
+            transition: 1s 1.4s ease;
+        }
+
+        .loader-wrapper .loder-section.right-section {
+            right: 0;
+            transition: 1s 1.4s ease;
+        }
+
+        /** When page loaded **/
+        .loaded .loder-section.left-section {
+            left: -100%;
+        }
+
+        .loaded .loder-section.right-section {
+            right: -100%;
+        }
+
+        .loaded .loader-wrapper {
+            visibility: hidden;
+        }
+
+        .loaded .loader {
+            top: -100%;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <!-- Loder Start -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loder-section left-section"></div>
+        <div class="loder-section right-section"></div>
+    </div>
+    <!-- Loder End -->
+    <h1> Pagina s-a aincarcat!</h1>
+
+    <script>
+        // Loder  //
+        window.addEventListener("load", (event) => {
+            setTimeout(() => {
+                console.log("page is fully loaded");
+                var element = document.getElementById("body");
+                element.classList.add("loaded");
+            }, 3000)
+        });
+
+    </script>
+</body>
+
+</html>

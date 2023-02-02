@@ -1,0 +1,75 @@
+body {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+}
+.card-container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2rem;
+  width: 55rem;
+}
+.card {
+  align-items: center;
+  border-radius: 0.25rem;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  height: 23rem;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+/* Counter */
+.counter {
+  animation: numara 10s linear  reverse;
+  animation-iteration-count: 2;
+  background-color: rgb(163, 219, 59);
+  counter-reset: count 0;
+}
+.counter::before {
+  color: #b40c0c;
+  content: counter(cifra);
+  font-size: 7rem;
+  line-height: 1.1;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes numarax {
+  0% {
+    counter-increment: cifra 0;
+  }
+  10% {
+    counter-increment: cifra 1;
+  }
+  20% {
+    counter-increment: cifra 2;
+  }
+  30% {
+    counter-increment: cifra 3;
+  }
+  40% {
+    counter-increment: cifra 4;
+  }
+  50% {
+    counter-increment: cifra 5;
+  }
+  60% {
+    counter-increment: cifra 6;
+  }
+  70% {
+    counter-increment: cifra 7;
+  }
+  80% {
+    counter-increment: cifra 8;
+  }
+  90% {
+    counter-increment: cifra 9;
+  }
+  100% {
+    counter-increment: cifra 10;
+  }
+}
+/* End counter */
