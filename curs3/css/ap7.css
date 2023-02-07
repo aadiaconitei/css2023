@@ -1,0 +1,40 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: rgb(42, 224, 154);
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+article {
+  padding: 10px;
+  margin: 10px;
+  background: rgb(132, 189, 243);
+}
+
+/* Add your flexbox CSS below here */
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+article {
+  flex: 200px;
+}

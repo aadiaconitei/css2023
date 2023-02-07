@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <img src="./img/ap3.jpg" alt="demo" 
+    sizes="(max-width:799px) 480px , (min-width:800px) 800px"
+    srcset="./img/ap3_480.jpg 480w, ./img/ap3_800.jpg 800w">
+    
+
+    <picture>
+        <source media="(max-width:799px)" srcset="./img/ap3_480.jpg" sizes="480px">
+        <source media="(min-width:800px)" srcset="./img/ap3_800.jpg" sizes="800px">
+        <img src="./img/ap3.jpg" alt="demo">
+    </picture>
+</body>
+</html>

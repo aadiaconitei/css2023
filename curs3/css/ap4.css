@@ -1,0 +1,40 @@
+html, body{
+    height: 100%;
+  }
+  body { 
+    /* http://ppcdn.500px.org/75319705/1991f76c0c6a91ae1d23eb94ac5c7a9f7e79c480/2048.jpg */
+    background-image: url(../img/stock-photo.jpg) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+    background-color: #999;
+    
+  }
+  
+  div, body{
+    margin: 0;
+    padding: 0;
+    font-family: exo, sans-serif;
+    
+  }
+  .wrapper {
+    height: 100%; 
+    width: 100%; 
+  }
+  
+  .message {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%; 
+    height:45%;
+    bottom: 0; 
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 0.5em;
+  }
+  
+  

@@ -1,0 +1,25 @@
+/* Root font-size on the document level */
+/* default 1em = 16px */
+html {
+    font-size: 20px;
+}
+
+.font_px{
+    font-size:10px;
+    color:red;
+
+}
+.font_rem{
+    font-size: 1.5rem; /* 1.5 x 20px = 30px;*/
+    color:green;
+
+}
+
+div{
+    font-size: 16px;
+
+}
+.font_em{
+    font-size: 1em;  /* 1 x 16px = 16px */
+    color:blue;
+}

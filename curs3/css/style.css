@@ -1,0 +1,151 @@
+/* Aplicatia1_1 */
+
+main {
+  margin: auto;
+  width: 100%;
+  max-width: 700px;
+}
+.view {
+  width: 300px;
+  height: 170px;
+  margin: 10px;
+  float: left;
+  border: 10px solid #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor:pointer;
+  background: #fff url(../img/bgimg.jpg) no-repeat center center;
+}
+.view .mask,
+.view .content {
+  width: 300px;
+  height: 170px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.view img {
+  display: block;
+  position: relative;
+}
+.view a.info:hover {
+  box-shadow: 0 0 5px #000;
+  padding: 10px;
+}
+.view-tenth img {
+  transform: scaleY(1);
+  transition: all 0.7s ease-in-out;
+}
+.view-tenth .mask {
+  background-color: rgba(255, 231, 179, 0.3);
+  transition: all 0.5s linear;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.view-tenth h2 {
+  border-bottom: 
+  1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px;
+  /* -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0); */
+  transform: scale(0);
+  color: #333;
+  transition: all 0.5s linear;
+  filter: alpha(opacity=0);
+  /* -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"; */
+  opacity: 0;
+}
+.view-tenth a.info {
+  filter: alpha(opacity=0);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+.view-tenth:hover img {
+  transform: scale(10);
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.view-tenth:hover .mask {
+  /* -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)"; */
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.view-tenth:hover h2,
+.view-tenth:hover a.info {
+  transform: scale(1);
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+/* Aplicatia1_2 */
+#elementToAnimate {
+  position: relative;
+  /* animation: yourAnimation 5s linear 0s infinite normal none; */
+  animation-name: yourAnimation;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes yourAnimation {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translate(50px, 0) rotate(90deg) scale(1);
+    color: blue;
+  }
+  35% {
+    transform: translate(50px, 50px) rotate(90deg) scale(7);
+  }
+  40% {
+    transform: translate(150px, 50px) rotate(-100deg) scale(1);
+  }
+  45% {
+    transform: translate(150px, 0) rotate(90deg) scale(1);
+  }
+  60% {
+    transform: translate(350px, 0) rotate(0deg) scale(1);
+  }
+  65% {
+    transform: translate(350px, 50px) rotate(0deg) scale(1);
+  }
+  80% {
+    transform: translate(550px, 50px) rotate(0deg) scale(1);
+  }
+  85% {
+    transform: translate(550px, 0) rotate(0deg) scale(1);
+  }
+  95% {
+    transform: translate(650px, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate(1900px, 0) rotate(0deg) scale(1);
+  }
+}
+
+#demogame {
+  /* https://imageio.forbes.com/blogs-images/startswithabang/files/2020/04/opo9601c-1200x947.jpg */
+  background-image: url("https://imageio.forbes.com/blogs-images/startswithabang/files/2020/04/opo9601c-1200x947.jpg");
+  width: 100%;
+  max-width: 1600px;
+  height: 100vh;
+  margin: auto;
+  background-size: cover;
+}
+
+#targetElement {
+  color: red;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  font-size: 65px;
+  transform-origin: center center;
+}
