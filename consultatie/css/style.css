@@ -18,7 +18,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   
 }
 /* Header/logo Title */
@@ -51,8 +53,9 @@ body {
 .row {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   /* gap: 20px; */
-  min-height: clamp(60vh 80vh 100vh);
+  /* min-height: calc(100vh - 100px); */
 }
 /* MAIN */
 main {
