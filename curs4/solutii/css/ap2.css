@@ -1,0 +1,32 @@
+body {
+  margin: 40px auto;
+  width: 100%;
+  max-width:1000px;
+}
+.box {
+  background-color: rgb(235, 84, 84);
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  order: 1;
+}
+.box:nth-child(2n) {
+  background-color: rgb(53, 130, 218);
+  color: #000;
+}
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px ;
+  grid-gap: 10px;
+}
+
+ .box1 {
+  order: 3;
+}
+
+.box2 {
+  order: 2;
+} 

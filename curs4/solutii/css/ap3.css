@@ -1,0 +1,17 @@
+.box {
+    width: 100%;
+    height: 300px;
+}
+.green {
+    background: green;
+}
+.red {
+    background: red;
+}
+.black {
+    background: black;
+}
+.main {
+    display: flex;
+    flex-direction: column
+}
