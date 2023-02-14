@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./css/ap2.css">
+
+</head>
+
+<body>
+    <section id="myBox" tabindex="0">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+    </section>
+</body>
+
+<output id="output"></output>
+<script>
+    var e = "";
+    var style = "";
+    e = document.getElementById("myBox");
+    style = window.getComputedStyle(e).getPropertyValue("transform");
+    document.getElementById("output").innerText = style;
+</script>
+</body>
+
+</html>

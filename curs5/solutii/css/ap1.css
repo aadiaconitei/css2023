@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 100px;
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0 0 1em;
+}
+
+.wrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.box-rotate-wrap {
+  float: left;
+  margin: 0 30px 30px 0;
+  perspective: 1000px;
+}
+
+.box,
+.box > div {
+  width: 200px;
+  height: 200px;
+}
+
+.box-rotate {
+  position: relative;
+  transition: all 0.8s ease;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, -100px);
+}
+
+.box-rotate > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #fff;
+  padding: 20px;
+  overflow: auto;
+}
+
+.box-rotate .front {
+  background: rgba(246, 93, 93, 0.911);
+  z-index: 2;
+  transform: rotate3d(0, 1, 0, 0deg) translate3d(0, 0, 100px);
+}
+
+.box-rotate .back {
+  background: orange;
+  transform: rotate3d(0, 1, 0, 180deg) rotate(180deg) translate3d(0, 0, 100px);
+}
+
+.box-rotate .top {
+  background: purple;
+  height: 200px;
+  transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 0, 100px);
+}
+
+.box-rotate .bottom {
+  background: blue;
+  height: 200px;
+  transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 100px);
+}
+
+.box-rotate .left {
+  background: yellow;
+  transform: rotate3d(0, 1, 0, -90deg) translate3d(0, 0, 100px);
+}
+
+.box-rotate .right {
+  background: green;
+  transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 100px);
+}
+
+.box-rotate-top:hover {
+  transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, -90deg);
+}
+
+.box-rotate-bottom:hover {
+  transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 90deg);
+}
+
+.box-rotate-left:hover {
+  transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, 90deg);
+}
+
+.box-rotate-right:hover {
+  transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -90deg);
+}
+
+.box-rotate-back:hover {
+  transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, -180deg);
+}
+
+.box-rotate-gyro .back {
+  width: 200px;
+  height: 200px;
+  transform: rotate3d(0, 1, 0, 180deg) rotate(90deg)
+    translate3d(0px, 0px, 100px);
+}
+
+.box-rotate-gyro:hover {
+  transform: translate3d(0, 0, -100px) rotate3d(1, 1, 0, -180deg);
+}
+
+

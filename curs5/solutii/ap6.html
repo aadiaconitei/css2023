@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/ap6.css">
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+
+            context.arc(200, 100, 70, 0, 2 * Math.PI, false);
+            context.fillStyle = "red";
+            context.fill();
+
+
+            context.arc(100, 100, 70, 0, 2 * Math.PI, false);
+            context.fillStyle = "red";
+            context.fill();
+
+            context.rect(100, 100, 200, 200);
+            context.rotate(90 * Math.PI / 360);
+            context.fillStyle = "red";
+            context.fillRect(143, -70, 140, 140);
+
+        };
+    </script>
+</head>
+
+<body>
+    <div class="heart">
+        <h1>Cu elementul canvas</h1>
+        <canvas id="myCanvas" width="300" height="270"></canvas>
+    </div>
+    <div class="heart">
+        <h1> Cu elementul svg</h1>
+        <div id="svg">
+            <svg class="heart-loader" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 90 90" version="1.1">
+                <g class="heart-loader__group">
+                    <path class="heart-loader__square" stroke-width="1" fill="none" d="M0,30 0,90 60,90 60,30z" />
+                    <path class="heart-loader__circle m--left" stroke-width="1" fill="none"
+                        d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0" />
+                    <path class="heart-loader__circle m--right" stroke-width="1" fill="none"
+                        d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0" />
+                    <path class="heart-loader__heartPath" stroke-width="2"
+                        d="M60,30 a30,30 0 0,1 0,60 L0,90 0,30 a30,30 0 0,1 60,0" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
