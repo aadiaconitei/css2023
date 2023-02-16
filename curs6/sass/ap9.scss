@@ -1,0 +1,118 @@
+
+//   == Variables ==
+
+$bg-color: #ccc;
+
+body {
+  background-color: $bg-color;
+}
+
+//   == Nesting ==
+
+
+div.mod {
+  background : red;
+
+  /* ul nested inside nav */
+  section {
+    margin: 0;
+    padding: 0;
+
+    /* ul nested inside section */
+    ul {
+      list-style: none;
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+
+  }
+
+  a {
+    color: #ccc;
+    font-weight: bold;
+  }
+
+}
+
+
+//   ==Partials/include==
+
+@import 'reset';
+
+// ==Mixins==
+/*
+Mixin is created when we combine the properties of two or more objects.
+A good use of mixin in CSS would be to use it for the new CSS3 vendor prefixes.
+
+Mixins are declared using the "@mixin" declarative.
+Mixins can be called using the "@include" declarative.
+
+ */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box {
+  border: 1px solid #ddd;
+  @include border-radius(10px);
+}
+
+.big-box {
+  @include border-radius(40px);
+}
+
+
+
+
+// ==Extend/Inheritance==
+
+/*
+(1) Create a base css selector with a base set of properties.
+(2) Use the "@extend" declarative Extend/Inherit the base class to create the Sub class/Child class.
+
+ */
+
+.human {
+  border: 1px solid #ccc;
+}
+
+
+.alysson {
+  @extend .human;
+  padding: 20px;
+} 
+
+.umesh {
+  @extend .human;
+  padding: 30px;
+  font: arial sans-serif;
+}
+
+
+
+// == Operators==
+
+
+$width: 200;
+
+.box {
+  width: $width * 1px;
+}
+
+.big-box {
+  width: $width * 2px;
+}
+
+.bigger-box {
+  width: $width * 3 + 22px;
+}
+
+.small-box {
+  width: calc(($width * 3) / 20) * 1px;
+}

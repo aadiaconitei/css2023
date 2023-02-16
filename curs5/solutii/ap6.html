@@ -11,21 +11,18 @@
         window.onload = function () {
             var canvas = document.getElementById("myCanvas");
             var context = canvas.getContext("2d");
-
             context.arc(200, 100, 70, 0, 2 * Math.PI, false);
             context.fillStyle = "red";
             context.fill();
-
-
+            
             context.arc(100, 100, 70, 0, 2 * Math.PI, false);
             context.fillStyle = "red";
             context.fill();
-
+            
             context.rect(100, 100, 200, 200);
             context.rotate(90 * Math.PI / 360);
             context.fillStyle = "red";
             context.fillRect(143, -70, 140, 140);
-
         };
     </script>
 </head>

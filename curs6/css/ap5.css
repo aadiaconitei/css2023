@@ -1,0 +1,42 @@
+/* Acest comentariu apare in fisiereul .css */
+.myclass,
+h2 {
+  font-size: 30px;
+  color: red;
+}
+.myclass,
+h2 {
+  background: lightgreen;
+}
+h1 {
+  background-color: blue;
+}
+p {
+  background-color: green;
+}
+h2 {
+  font-style: italic;
+}
+#circle {
+  background-color: #4caf50;
+  border-radius: 100%;
+}
+#small-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #4caf50;
+  border-radius: 100%;
+}
+#small-square {
+  background-color: #4caf50;
+  width: 50px;
+  height: 50px;
+}
+#big-square {
+  background-color: #4caf50;
+  width: 200px;
+  height: 200px;
+}
+#big-square:hover {
+  background-color: rgba(0, 69, 144, 0.5);
+}

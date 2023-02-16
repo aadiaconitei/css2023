@@ -1,0 +1,58 @@
+// Acest comentariu NU apare in fisiereul .css
+/* Acest comentariu apare in fisiereul .css */
+
+// Variabile  - Lazy Evaluation
+@var: @a;
+@a: 25px;
+@a: 15px;
+.myclass {
+  font-size: @var; // Cauta mai intai local
+  @a: 30px;
+  color: red;
+}
+.myclass {
+  background: lightgreen;
+}
+@primary-color: green; // global variable
+h1 {
+  @primary-color: blue; // local variables
+  background-color: @primary-color;
+}
+p {
+  background-color: @primary-color;
+}
+// Mostenire
+h2 {
+  &:extend(.myclass);
+  font-style: italic;
+}
+// Mixin
+#circle {
+  background-color: #4caf50;
+  border-radius: 100%;
+}
+
+#small-circle {
+  width: 50px;
+  height: 50px;
+  #circle;
+}
+
+// Functii
+@bg: #004590;
+// definim functia
+#square(@size: 25px) {
+  background-color: #4caf50;
+  width: @size * 2;
+  height: @size * 2;
+}
+// folosim functia
+#small-square {
+  #square;
+}
+#big-square {
+  #square(100px);
+  &:hover {
+    background-color: fadeout(@bg, 50%);
+  }
+}
