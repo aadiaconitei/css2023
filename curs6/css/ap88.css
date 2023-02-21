@@ -1,0 +1,16 @@
+/* SASS */
+/* Fonts */
+div {
+  border: 5px solid #32cd32;
+  font-family: Arial, sans-serif;
+  color: #1d90ff;
+  background-color: #fce473;
+}
+div p {
+  color: #32cd32;
+}
+div p h1 {
+  color: #1d90ff;
+}
+
+/*# sourceMappingURL=ap88.css.map */

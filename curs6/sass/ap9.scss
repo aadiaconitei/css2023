@@ -12,12 +12,10 @@ body {
 
 div.mod {
   background : red;
-
   /* ul nested inside nav */
   section {
     margin: 0;
     padding: 0;
-
     /* ul nested inside section */
     ul {
       list-style: none;
@@ -25,9 +23,7 @@ div.mod {
       margin: 0;
       padding: 0;
     }
-
   }
-
   a {
     color: #ccc;
     font-weight: bold;
